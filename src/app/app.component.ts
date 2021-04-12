@@ -14,10 +14,9 @@ interface AppState {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-
   message$: Observable<string>;
   post: Observable<Post>;
 
@@ -37,7 +36,6 @@ export class AppComponent {
   }
 
   editText() {
-    console.log('text --> ', this.text);
     this.store.dispatch(new PostActions.EditText(this.text));
   }
 
